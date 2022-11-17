@@ -1,9 +1,27 @@
-<div>
-  <p>user_info</p>
-  <p>introduction</p>
-  <p>image</p>
-  <%= link_to '歯車アイコン',edit_user_path(current_user) %>
+<div class="col-md-3">
+
+  <h2>User info</h2>
+    <%= image_tag 'no_image.jpg'%>
+
+  <table class="table">
+    <tbody>
+      <tr></tr>
+      <tr>
+    	  <th>name</th>
+    	  <th><%= user.name %></th>
+      </tr>
+      <tr>
+    	  <th>introduction</th>
+    	  <th><%= user.introduction %></th>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>New Book</h2>
+
+
 </div>
+
 
 <div>
   <p>NewBook</p>
