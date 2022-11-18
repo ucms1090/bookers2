@@ -1,9 +1,26 @@
-<%= render 'userinfocreatebook', user: @user, book: @book %>
+<div class="container px-5 px-sm-0">
+  <div class="row">
+    <div class="col-md-3">
 
-<!--上の部分は共通テンプレでbooks#showと同じ-->
-<!--ここから下だけ、個人の投稿した本が一覧になる-->
-<div>
-  <p>Books</p>
-  <p>投稿した本の一覧</p>
+      <h2>User info</h2>
+        <%= image_tag @user.profile_image, size: "100x100" %>
+
+      <table class="table">
+        <tbody>
+          <tr></tr>
+          <tr>
+        	  <th>name</th>
+        	  <th><%= @user.name %></th>
+          </tr>
+          <tr>
+        	  <th>introduction</th>
+        	  <th><%= @user.introduction %></th>
+          </tr>
+        </tbody>
+      </table>
+
+      <%= link_to '歯車アイコン',edit_user_path(current_user) %>
+
+    </div>
+  </div>
 </div>
-
