@@ -12,10 +12,13 @@
     </thead>
       <tbody>
         <% @books.each do |book| %>
+        <!--user画面に使用される時と、books画面に使用される時で入るデータが違う-->
+        <!--userの時はuser.book.id的な。user#showでテンプレートに入れる変数をuser.rbで指定する。@books = Book.find(params[:id])-->
           <tr>
-            <td><%= image_tag 'no_image' %></td>
+            <td><%= link_to image_tag(book.user.get_profile_image), user_path(book.user.id) %></td>
             <td><%= book.title %></td>
             <td><%= book.body %></td>
+            <td><%= book.user.name %></td>
           </tr>
         <% end %>
       </tbody>
