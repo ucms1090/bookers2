@@ -13,7 +13,7 @@
         <!--user画面に使用される時と、books画面に使用される時で入るデータが違う-->
         <!--userの時はuser.book.id的な。user#showでテンプレートに入れる変数をuser.rbで指定する。@books = Book.find(params[:id])-->
           <tr>
-            <td><%= link_to image_tag(book.user.get_profile_image), user_path(book.user.id) %></td>
+            <td><%= link_to image_tag(book.user.get_profile_image(80,80)), user_path(book.user.id) %></td>
             <td><%= link_to book.title, book_path(book.id) %></td>
             <td><%= book.body %></td>
           </tr>
